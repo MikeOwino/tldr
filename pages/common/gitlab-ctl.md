@@ -1,6 +1,6 @@
 # gitlab-ctl
 
-> CLI tool for managing the GitLab omnibus.
+> Manage the GitLab omnibus.
 > More information: <https://docs.gitlab.com/omnibus/maintenance/>.
 
 - Display the status of every service:
@@ -19,7 +19,7 @@
 
 `sudo gitlab-ctl restart {{nginx}}`
 
-- Display the logs of every service and keep reading until `Ctrl + C` is pressed:
+- Display the logs of every service and keep reading until `<Ctrl c>` is pressed:
 
 `sudo gitlab-ctl tail`
 

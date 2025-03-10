@@ -7,6 +7,10 @@
 
 `man {{command}}`
 
+- Open the man page for a command in a browser (`BROWSER` environment variable can replace `=browser_name`):
+
+`man --html{{=browser_name}} {{command}}`
+
 - Display the man page for a command from section 7:
 
 `man {{7}} {{command}}`
@@ -25,7 +29,7 @@
 
 - Display the man page using a specific locale:
 
-`man --locale={{locale}} {{command}}`
+`man --locale {{locale}} {{command}}`
 
 - Search for manpages containing a search string:
 

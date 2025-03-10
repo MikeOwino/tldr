@@ -1,28 +1,28 @@
 # ip link
 
 > Ağ arayüzlerini yönet.
-> Daha fazla bilgi için: <https://man7.org/linux/man-pages/man8/ip-link.8.html>.
+> Daha fazla bilgi için: <https://manned.org/ip-link>.
 
 - Tüm ağ arayüzleriyle ilgili bilgileri göster:
 
-`ip link`
+`ip {{[l|link]}}`
 
 - Belirli bir ağ arayüzüyle ilgili bilgileri göster:
 
-`ip link show {{ethN}}`
+`ip {{[l|link]}} show {{ethN}}`
 
 - Bir ağ arayüzünü etkinleştir veya devre dışı bırak:
 
-`ip link set {{ethN}} {{up|down}}`
+`ip {{[l|link]}} set {{ethN}} {{up|down}}`
 
 - Bir ağ arayüzüne anlamlı bir ad ver:
 
-`ip link set {{ethN}} alias "{{LAN Arayüzü}}"`
+`ip {{[l|link]}} set {{ethN}} alias "{{LAN Arayüzü}}"`
 
 - Bir ağ arayüzünün MAC adresini değiştir:
 
-`ip link set {{ethN}} address {{ff:ff:ff:ff:ff:ff}}`
+`ip {{[l|link]}} set {{ethN}} address {{ff:ff:ff:ff:ff:ff}}`
 
 - Jumbo çerçeveleri kullanması için bir ağ arayüzünün MTU boyutunu değiştir:
 
-`ip link set {{ethN}} mtu {{9000}}`
+`ip {{[l|link]}} set {{ethN}} mtu {{9000}}`
