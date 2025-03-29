@@ -9,8 +9,8 @@
 
 - Generate the configuration file:
 
-`sudo grub-mkconfig --output={{/boot/grub/grub.cfg}}`
+`sudo grub-mkconfig {{[-o|--output]}} {{/boot/grub/grub.cfg}}`
 
-- Print the help page:
+- Display help:
 
 `grub-mkconfig --help`

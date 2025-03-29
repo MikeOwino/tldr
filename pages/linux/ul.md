@@ -1,7 +1,7 @@
 # ul
 
-> Performs the underlining of a text.
-> Each character in a given string must be underlined separately.
+> Underline a text.
+> Each character in a string must be underlined separately.
 > More information: <https://manned.org/ul>.
 
 - Display the contents of the file with underlines where applicable:
@@ -10,4 +10,4 @@
 
 - Display the contents of the file with underlines made of dashes `-`:
 
-`ul -i {{file.txt}}`
+`ul {{[-i|--indicated]}} {{file.txt}}`

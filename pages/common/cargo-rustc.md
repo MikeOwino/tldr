@@ -1,25 +1,26 @@
 # cargo rustc
 
-> Compile a Rust package, and pass extra options to the compiler.
+> Compile a Rust package. Similar to `cargo build`, but you can pass extra options to the compiler.
+> See `rustc --help` for all available options.
 > More information: <https://doc.rust-lang.org/cargo/commands/cargo-rustc.html>.
 
-- Build the package or packages defined by the `Cargo.toml` manifest file in the current working directory:
+- Build the package and pass options to `rustc`:
 
-`cargo rustc`
+`cargo rustc -- {{rustc_options}}`
 
 - Build artifacts in release mode, with optimizations:
 
-`cargo rustc --release`
+`cargo rustc {{[-r|--release]}}`
 
 - Compile with architecture-specific optimizations for the current CPU:
 
-`cargo rustc --release -- -C target-cpu=native`
+`cargo rustc {{[-r|--release]}} -- -C target-cpu=native`
 
-- Compile with speed optimization:
+- Compile with speed optimizations:
 
 `cargo rustc -- -C opt-level {{1|2|3}}`
 
-- Compile with [s]ize optimization (`z` also turns off loop vectorization):
+- Compile with [s]ize optimizations (`z` also turns off loop vectorization):
 
 `cargo rustc -- -C opt-level {{s|z}}`
 
@@ -29,7 +30,7 @@
 
 - Build a specific package:
 
-`cargo rustc --package {{package}}`
+`cargo rustc {{[-p|--package]}} {{package}}`
 
 - Build only the specified binary:
 

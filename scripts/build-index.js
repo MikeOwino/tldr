@@ -2,18 +2,19 @@
 
 'use strict';
 
-const glob = require('glob');
+const { glob } = require('glob');
+const { sep } = require('path');
 
 function parsePlatform(pagefile) {
-  return pagefile.split(/\//)[1];
+  return pagefile.split(sep)[1];
 }
 
 function parsePagename(pagefile) {
-  return pagefile.split(/\//)[2].replace(/\.md$/, '');
+  return pagefile.split(sep)[2].replace(/\.md$/, '');
 }
 
 function parseLanguage(pagefile) {
-  let pagesFolder = pagefile.split(/\//)[0];
+  let pagesFolder = pagefile.split(sep)[0];
   return pagesFolder == 'pages' ? 'en' : pagesFolder.replace(/^pages\./, '');
 }
 
@@ -33,7 +34,7 @@ function buildPagesIndex(files) {
       }
 
       const targets = index[page].targets;
-      const exists = targets.some((t) => {return t.platform === os && t.language === language});
+      const exists = targets.some((t) => t.os === os && t.language === language);
       if (!exists) {
         targets.push({os, language})
       }
@@ -71,13 +72,14 @@ function saveIndex(index) {
   console.log(JSON.stringify(indexFile));
 }
 
-glob('pages*/**/*.md', function (er, files) {
-  if (er !== null) {
-    console.error('ERROR finding pages!');
-    console.error(er);
-    return;
-  }
-
+(async () => {
+  const files = await glob('pages*/**/*.md');
   let index = buildPagesIndex(files);
   saveIndex(index);
+})().then(() => {
+  process.exit(0);
+}).catch((err) => {
+  console.error('ERROR building index!');
+  console.error(err);
+  process.exit(1);
 });

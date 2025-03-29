@@ -11,9 +11,9 @@
 
 `googler -j {{keyword}}`
 
-- Show N search results (default 10):
+- Show `n` search results (default: 10):
 
-`googler -n {{N}} {{keyword}}`
+`googler -n {{n}} {{keyword}}`
 
 - Disable automatic spelling correction:
 
@@ -31,6 +31,6 @@
 
 `googler -u`
 
-- For more help in interactive mode:
+- Display help in interactive mode:
 
-`?`
+`<?>`

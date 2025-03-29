@@ -1,6 +1,6 @@
 # dirs
 
-> Displays or manipulates the directory stack.
+> Display or manipulate the directory stack.
 > The directory stack is a list of recently visited directories that can be manipulated with the `pushd` and `popd` commands.
 > More information: <https://www.gnu.org/software/bash/manual/bash.html#Directory-Stack-Builtins>.
 
@@ -12,9 +12,9 @@
 
 `dirs -p`
 
-- Display only the nth entry in the directory stack, starting at 0:
+- Display only the `n`th entry in the directory stack, starting at 0:
 
-`dirs +{{N}}`
+`dirs +{{n}}`
 
 - Clear the directory stack:
 

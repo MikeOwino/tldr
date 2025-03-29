@@ -1,19 +1,19 @@
 # unexpand
 
 > Convert spaces to tabs.
-> More information: <https://www.gnu.org/software/coreutils/unexpand>.
+> More information: <https://www.gnu.org/software/coreutils/manual/html_node/unexpand-invocation.html>.
 
-- Convert blanks in each file to tabs, writing to standard output:
+- Convert blanks in each file to tabs, writing to `stdout`:
 
 `unexpand {{path/to/file}}`
 
-- Convert blanks to tabs, reading from standard output:
+- Convert blanks to tabs, reading from `stdout`:
 
 `unexpand`
 
 - Convert all blanks, instead of just initial blanks:
 
-`unexpand -a {{path/to/file}}`
+`unexpand {{[-a|--all]}} {{path/to/file}}`
 
 - Convert only leading sequences of blanks (overrides -a):
 
@@ -21,4 +21,4 @@
 
 - Have tabs a certain number of characters apart, not 8 (enables -a):
 
-`unexpand -t {{number}} {{path/to/file}}`
+`unexpand {{[-t|--tabs]}} {{number}} {{path/to/file}}`

@@ -1,20 +1,24 @@
 # chrt
 
 > Manipulate the real-time attributes of a process.
-> More information: <https://man7.org/linux/man-pages/man1/chrt.1.html>.
+> More information: <https://manned.org/chrt>.
 
 - Display attributes of a process:
 
-`chrt --pid {{PID}}`
+`chrt {{[-p|--pid]}} {{PID}}`
 
 - Display attributes of all threads of a process:
 
-`chrt --all-tasks --pid {{PID}}`
+`chrt {{[-a|--all-tasks]}} {{[-p|--pid]}} {{PID}}`
 
 - Display the min/max priority values that can be used with `chrt`:
 
-`chrt --max`
+`chrt {{[-m|--max]}}`
 
-- Set the scheduling policy for a process:
+- Set the scheduling priority of a process:
 
-`chrt --pid {{PID}} --{{deadline|idle|batch|rr|fifo|other}}`
+`chrt {{[-p|--pid]}} {{priority}} {{PID}}`
+
+- Set the scheduling policy of a process:
+
+`chrt --{{deadline|idle|batch|rr|fifo|other}} {{[-p|--pid]}} {{priority}} {{PID}}`

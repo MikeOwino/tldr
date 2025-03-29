@@ -1,7 +1,7 @@
 # lsns
 
 > List information about all namespaces or about the specified namespace.
-> More information: <https://man7.org/linux/man-pages/man8/lsns.8.html>.
+> More information: <https://manned.org/lsns>.
 
 - List all namespaces:
 
@@ -9,16 +9,16 @@
 
 - List namespaces in JSON format:
 
-`lsns --json`
+`lsns {{[-J|--json]}}`
 
-- List namespaces associated with {{pid}}:
+- List namespaces associated with the specified process:
 
-`lsns --task {{pid}}`
+`lsns {{[-p|--task]}} {{pid}}`
 
 - List the specified type of namespaces only:
 
-`lsns --type <mnt|net|ipc|user|pid|uts|cgroup|time>`
+`lsns {{[-t|--type]}} {{mnt|net|ipc|user|pid|uts|cgroup|time}}`
 
 - List namespaces, only showing the namespace ID, type, PID, and command:
 
-`lsns --output NS,TYPE,PID,COMMAND`
+`lsns {{[-o|--output]}} {{NS,TYPE,PID,COMMAND}}`

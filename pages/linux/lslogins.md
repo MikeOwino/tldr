@@ -1,7 +1,7 @@
 # lslogins
 
 > Show information about users on a Linux system.
-> More information: <https://man7.org/linux/man-pages/man1/lslogins.1.html>.
+> More information: <https://manned.org/lslogins>.
 
 - Display users in the system:
 
@@ -9,20 +9,20 @@
 
 - Display users belonging to a specific group:
 
-`lslogins --groups={{groups}}`
+`lslogins {{[-g|--groups]}} {{groups}}`
 
 - Display user accounts:
 
-`lslogins --user-accs`
+`lslogins {{[-u|--user-accs]}}`
 
 - Display last logins:
 
-`lslogins --last`
+`lslogins {{[-L|--last]}}`
 
 - Display system accounts:
 
-`lslogins --system-accs`
+`lslogins {{[-s|--system-accs]}}`
 
 - Display supplementary groups:
 
-`lslogins --supp-groups`
+`lslogins {{[-G|--supp-groups]}}`

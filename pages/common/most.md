@@ -9,7 +9,7 @@
 
 - Open several files:
 
-`most {{path/to/file1}} {{path/to/file2}}`
+`most {{path/to/file1 path/to/file2 ...}}`
 
 - Open a file at the first occurrence of "string":
 
@@ -17,20 +17,20 @@
 
 - Move through opened files:
 
-`:O n`
+`<:><n>{{<ArrowUp>|<ArrowDown>}}`
 
 - Jump to the 100th line:
 
-`{{100}}j`
+`<j>{{100}}<Enter>`
 
 - Edit current file:
 
-`e`
+`<e>`
 
 - Split the current window in half:
 
-`<CTRL-x> o`
+`<CTRL x><o>`
 
 - Exit:
 
-`Q`
+`<q>`
